@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.decorators;
+package com.mycompany.decorators.beverage;
 
 /**
  *
@@ -10,9 +10,15 @@ package com.mycompany.decorators;
  */
 public class Beverage implements IBeverage {
 
+    private float costo;
+
     @Override
     public void send(String msg) {
-        System.out.println(msg);
+    }
+
+    @Override
+    public float getCosto() {
+        return costo;
     }
 
 }

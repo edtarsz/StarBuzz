@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.decorators;
+package com.mycompany.decorators.beverage;
 
 /**
  *
@@ -10,7 +10,7 @@ package com.mycompany.decorators;
  */
 public class ExpressoDecorator extends BaseBeverageDecorator {
 
-    private float cost = 38;
+    private final float costo = 45.00f;
 
     public ExpressoDecorator(IBeverage wrapped) {
         super(wrapped);
@@ -18,7 +18,13 @@ public class ExpressoDecorator extends BaseBeverageDecorator {
 
     @Override
     public void send(String msg) {
-        msg = "House Blend, " + msg;
+        msg = "* Expresso .......... ";
+        System.out.println(msg + costo);
         super.send(msg);
+    }
+
+    @Override
+    public float getCosto() {
+        return super.getCosto() + costo;
     }
 }

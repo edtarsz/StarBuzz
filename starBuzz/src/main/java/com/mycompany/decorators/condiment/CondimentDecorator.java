@@ -2,15 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.decorators;
+package com.mycompany.decorators.condiment;
+
+import com.mycompany.decorators.beverage.BaseBeverageDecorator;
+import com.mycompany.decorators.beverage.IBeverage;
 
 /**
  *
  * @author user
  */
 public class CondimentDecorator extends BaseBeverageDecorator {
-
-    private float cost = 38;
 
     public CondimentDecorator(IBeverage wrapped) {
         super(wrapped);
@@ -20,4 +21,5 @@ public class CondimentDecorator extends BaseBeverageDecorator {
     public void send(String msg) {
         super.send(msg);
     }
+
 }

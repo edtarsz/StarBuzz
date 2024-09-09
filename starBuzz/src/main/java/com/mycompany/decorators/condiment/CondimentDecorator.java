@@ -14,7 +14,8 @@ import com.mycompany.decorators.beverage.IBeverage;
  *
  * @author Eduardo Talavera Ramos | 00000245244 | Fecha: 08/09/2024
  */
-public class CondimentDecorator extends BaseBeverageDecorator {
+
+public abstract class CondimentDecorator extends BaseBeverageDecorator {
 
     /**
      * Constructor que recibe una instancia de IBeverage (bebida base) que será

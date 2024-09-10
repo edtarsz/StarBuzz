@@ -14,8 +14,9 @@ import com.mycompany.decorators.beverage.IBeverage;
  *
  * @author Eduardo Talavera Ramos | 00000245244 | Fecha: 08/09/2024
  */
-
 public abstract class CondimentDecorator extends BaseBeverageDecorator {
+
+    private final float costo = 10.00f; // Costo específico para la bebida "House Blend".
 
     /**
      * Constructor que recibe una instancia de IBeverage (bebida base) que será
@@ -38,5 +39,16 @@ public abstract class CondimentDecorator extends BaseBeverageDecorator {
     @Override
     public void send(String msg) {
         super.send(msg); // Llama al método `send` de la bebida envuelta (o de los decoradores anteriores).
+    }
+
+    /**
+     * Método que delega la obtención del costo del condimento a la bebida base
+     * decorada.
+     *
+     * @return El costo de la bebida base decorada.
+     */
+    @Override
+    public float getCosto() {
+        return super.getCosto(); // Devuelve el costo de la bebida base.
     }
 }

@@ -15,6 +15,8 @@ import com.mycompany.decorators.beverage.IBeverage;
  */
 public class SoyDecorator extends CondimentDecorator {
 
+    private final float costo = 10.00f; // Costo específico para la bebida "House Blend".
+
     /**
      * Constructor que recibe una instancia de IBeverage (bebida base) y la
      * envuelve con el condimento Soy (leche de soya).
@@ -33,8 +35,20 @@ public class SoyDecorator extends CondimentDecorator {
      */
     @Override
     public void send(String msg) {
-        msg = "-    Soy"; // Modifica el mensaje para indicar que se ha añadido Soy.
-        System.out.println(msg); // Imprime el condimento añadido.
+        msg = "-    Soy .......... "; // Modifica el mensaje para incluir "House Blend".
+        System.out.println(msg + costo); // Imprime el mensaje con el costo asociado.
         super.send(msg); // Llama al método `send` del decorador anterior, permitiendo encadenar decoradores.
+    }
+
+    /**
+     * Método que calcula el costo total del condimento de la bebida decorada
+     * añadiendo el costo de "Soy".
+     *
+     * @return El costo total del condimento incluyendo el costo del decorador
+     * "Soy".
+     */
+    @Override
+    public float getCosto() {
+        return super.getCosto() + costo; // Devuelve el costo del condimento más el costo del decorador.
     }
 }

@@ -5,9 +5,7 @@
 package com.mycompany.decorators.beverage;
 
 /**
- * Decorador concreto que representa una bebida de tipo "Decaf". Extiende la
- * clase base `BaseBeverageDecorator` y añade el costo y el mensaje específico
- * para la bebida "Decaf".
+ * Decorador concreto que representa una bebida de tipo "Decaf". Extiende la clase base `BaseBeverageDecorator` y añade el costo y el mensaje específico para la bebida "Decaf".
  *
  * @author Eduardo Talavera Ramos | 00000245244 | Fecha: 08/09/2024
  */
@@ -16,8 +14,7 @@ public class DecafDecorator extends BaseBeverageDecorator {
     private final float costo = 30.00f; // Costo específico para la bebida "Decaf".
 
     /**
-     * Constructor que recibe una instancia de IBeverage (bebida base) y la
-     * envuelve con el decorador "Decaf".
+     * Constructor que recibe una instancia de IBeverage (bebida base) y la envuelve con el decorador "Decaf".
      *
      * @param wrapped La bebida base que será decorada con Decaf.
      */
@@ -26,8 +23,7 @@ public class DecafDecorator extends BaseBeverageDecorator {
     }
 
     /**
-     * Método que imprime la adición de "Decaf" a la bebida junto con su costo,
-     * y luego llama al método `send` de la bebida decorada.
+     * Método que imprime la adición de "Decaf" a la bebida junto con su costo, y luego llama al método `send` de la bebida decorada.
      *
      * @param msg El mensaje que se desea enviar o imprimir.
      */
@@ -39,11 +35,9 @@ public class DecafDecorator extends BaseBeverageDecorator {
     }
 
     /**
-     * Método que calcula el costo total de la bebida decorada añadiendo el
-     * costo de "Decaf".
+     * Método que calcula el costo total de la bebida decorada añadiendo el costo de "Decaf".
      *
-     * @return El costo total de la bebida incluyendo el costo del decorador
-     * "Decaf".
+     * @return El costo total de la bebida incluyendo el costo del decorador "Decaf".
      */
     @Override
     public float getCosto() {

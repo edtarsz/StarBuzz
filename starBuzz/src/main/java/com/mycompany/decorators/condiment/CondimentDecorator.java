@@ -16,8 +16,6 @@ import com.mycompany.decorators.beverage.IBeverage;
  */
 public abstract class CondimentDecorator extends BaseBeverageDecorator {
 
-    private final float costo = 10.00f; // Costo específico para la bebida "House Blend".
-
     /**
      * Constructor que recibe una instancia de IBeverage (bebida base) que será
      * decorada con un condimento.
